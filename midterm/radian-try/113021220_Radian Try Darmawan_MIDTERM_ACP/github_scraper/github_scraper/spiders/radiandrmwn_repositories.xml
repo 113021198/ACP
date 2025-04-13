@@ -16,52 +16,7 @@
     <languages>
       <language>None</language>
     </languages>
-    <commits>0</commits>
-  </repository>
-  <repository>
-    <url>https://github.com/radiandrmwn/go-crud</url>
-    <about>go-crud</about>
-    <last_updated>2024-12-10</last_updated>
-    <languages>
-      <language>None</language>
-    </languages>
-    <commits>0</commits>
-  </repository>
-  <repository>
-    <url>https://github.com/radiandrmwn/gowiki</url>
-    <about>gowiki</about>
-    <last_updated>2024-11-06</last_updated>
-    <languages>
-      <language>None</language>
-    </languages>
-    <commits>0</commits>
-  </repository>
-  <repository>
-    <url>https://github.com/radiandrmwn/ProjectPBKK</url>
-    <about>ProjectPBKK</about>
-    <last_updated>2024-10-12</last_updated>
-    <languages>
-      <language>None</language>
-    </languages>
-    <commits>0</commits>
-  </repository>
-  <repository>
-    <url>https://github.com/radiandrmwn/Booking-app</url>
-    <about>Booking-app</about>
-    <last_updated>2024-11-06</last_updated>
-    <languages>
-      <language>None</language>
-    </languages>
-    <commits>0</commits>
-  </repository>
-  <repository>
-    <url>https://github.com/radiandrmwn/medical-symptoms-expert-system</url>
-    <about>medical-symptoms-expert-system</about>
-    <last_updated>2024-12-12</last_updated>
-    <languages>
-      <language>None</language>
-    </languages>
-    <commits>0</commits>
+    <commits>2</commits>
   </repository>
   <repository>
     <url>https://github.com/radiandrmwn/quiz1</url>
@@ -70,6 +25,51 @@
     <languages>
       <language>None</language>
     </languages>
-    <commits>0</commits>
+    <commits>1</commits>
+  </repository>
+  <repository>
+    <url>https://github.com/radiandrmwn/ProjectPBKK</url>
+    <about>ProjectPBKK</about>
+    <last_updated>2024-10-12</last_updated>
+    <languages>
+      <language>None</language>
+    </languages>
+    <commits>22</commits>
+  </repository>
+  <repository>
+    <url>https://github.com/radiandrmwn/Booking-app</url>
+    <about>Booking-app</about>
+    <last_updated>2024-11-06</last_updated>
+    <languages>
+      <language>None</language>
+    </languages>
+    <commits>5</commits>
+  </repository>
+  <repository>
+    <url>https://github.com/radiandrmwn/gowiki</url>
+    <about>gowiki</about>
+    <last_updated>2024-11-06</last_updated>
+    <languages>
+      <language>None</language>
+    </languages>
+    <commits>4</commits>
+  </repository>
+  <repository>
+    <url>https://github.com/radiandrmwn/go-crud</url>
+    <about>go-crud</about>
+    <last_updated>2024-12-10</last_updated>
+    <languages>
+      <language>None</language>
+    </languages>
+    <commits>14</commits>
+  </repository>
+  <repository>
+    <url>https://github.com/radiandrmwn/medical-symptoms-expert-system</url>
+    <about>medical-symptoms-expert-system</about>
+    <last_updated>2024-12-12</last_updated>
+    <languages>
+      <language>None</language>
+    </languages>
+    <commits>20</commits>
   </repository>
 </repositories>
