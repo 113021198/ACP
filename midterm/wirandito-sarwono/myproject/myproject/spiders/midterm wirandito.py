@@ -6,7 +6,7 @@ import json
 class GithubSpider(scrapy.Spider):
     name = 'github'
     allowed_domains = ['github.com']
-    start_urls = ['https://github.com/113021198?tab=repositories']
+    start_urls = ['https://github.com/DitoNewJeans?tab=repositories']
     
     custom_settings = {
         'ROBOTSTXT_OBEY': False,
