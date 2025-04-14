@@ -8,4 +8,19 @@
 </items><?xml version="1.0" encoding="utf-8"?>
 <items>
 <item><url>https://github.com/113021198/ACP</url><about>No description</about><last_updated>2025-04-13</last_updated><languages>Python, 100.0%</languages><commits>8</commits></item>
+</items><?xml version="1.0" encoding="utf-8"?>
+<items>
+<item><url>https://github.com/113021198/testis</url><about>No description</about><last_updated>2025-04-14</last_updated><languages>None</languages><commits>1</commits></item>
+<item><url>https://github.com/113021198/ACP</url><about>No description</about><last_updated>2025-04-13</last_updated><languages>Python, 100.0%</languages><commits>21</commits></item>
+</items><?xml version="1.0" encoding="utf-8"?>
+<items>
+<item><name>testis</name><url>https://github.com/113021198/testis</url><about>testiss</about><last_updated>2025-04-14</last_updated><languages>None</languages><commits>1</commits></item>
+<item><name>ACP</name><url>https://github.com/113021198/ACP</url><about>No description</about><last_updated>2025-04-13</last_updated><languages>Python, 100.0%</languages><commits>21</commits></item>
+</items><?xml version="1.0" encoding="utf-8"?>
+<items>
+<item><name>TSP-GG</name><url>https://github.com/DitoNewJeans/TSP-GG</url><about>No description</about><last_updated>2023-10-07</last_updated><languages>Python, 100.0%</languages><commits>3</commits></item>
+<item><name>QUIZ-2-DAA</name><url>https://github.com/DitoNewJeans/QUIZ-2-DAA</url><about>No description</about><last_updated>2024-05-24</last_updated><languages>JavaScript, 78.4%, CSS, 11.8%, HTML, 9.8%</languages><commits>2</commits></item>
+<item><name>LOGIN-WEBPRO-UTS</name><url>https://github.com/DitoNewJeans/LOGIN-WEBPRO-UTS</url><about>No description</about><last_updated>2023-10-22</last_updated><languages>PHP, 60.8%, HTML, 21.6%, JavaScript, 17.6%</languages><commits>6</commits></item>
+<item><name>ookoko</name><url>https://github.com/DitoNewJeans/ookoko</url><about>No description</about><last_updated>2023-09-28</last_updated><languages>None</languages><commits>None</commits></item>
+<item><name>quiz1</name><url>https://github.com/DitoNewJeans/quiz1</url><about>No description</about><last_updated>2023-09-27</last_updated><languages>HTML, 71.4%, CSS, 27.8%, JavaScript, 0.8%</languages><commits>21</commits></item>
 </items>

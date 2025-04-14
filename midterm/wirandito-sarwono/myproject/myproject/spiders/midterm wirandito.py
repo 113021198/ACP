@@ -6,7 +6,7 @@ import json
 class GithubSpider(scrapy.Spider):
     name = 'github'
     allowed_domains = ['github.com']
-    start_urls = ['https://github.com/DitoNewJeans?tab=repositories']
+    start_urls = ['https://github.com/113021198?tab=repositories']
     
     custom_settings = {
         'ROBOTSTXT_OBEY': False,
@@ -37,15 +37,32 @@ class GithubSpider(scrapy.Spider):
                 if name_element:
                     name = name_element.strip()
                     url = response.urljoin(repo.css('h3 a::attr(href)').get())
-                    about = repo.css('p.color-fg-muted.mb-0::text').get()
-                    about = about.strip() if about else "No description"
+                    
+                    about = None
+                    about_selectors = [
+                        'p.color-fg-muted.mb-0::text',
+                        'p.color-text-secondary.mb-0::text',
+                        'p[itemprop="description"]::text',
+                        'div.py-1 p::text',
+                        'p.wb-break-word.text-small.mt-2.mb-0::text'
+                    ]
+                    
+                    for selector in about_selectors:
+                        about = repo.css(selector).get()
+                        if about:
+                            about = about.strip()
+                            break
+                    
+                    if not about:
+                        about = "No description"
+                    
                     last_updated = repo.css('relative-time::attr(datetime)').get()
                     if last_updated:
                         last_updated = datetime.datetime.fromisoformat(last_updated.replace('Z', '+00:00')).strftime('%Y-%m-%d')
                     else:
                         last_updated = "Not specified"
                         
-                    is_empty = 'This repository is empty.' in repo.get()
+                    is_empty = 'test empty repo' in repo.get()
                     
                     self.logger.info(f"Found repository: {name}")
                     
@@ -76,8 +93,24 @@ class GithubSpider(scrapy.Spider):
                     if name_element:
                         name = name_element.strip()
                         url = response.urljoin(repo.css('a[itemprop="name codeRepository"]::attr(href)').get())
-                        about = repo.css('p[itemprop="description"]::text').get()
-                        about = about.strip() if about else "No description"
+                        
+                        about = None
+                        about_selectors = [
+                            'p[itemprop="description"]::text',
+                            'div.py-1 p::text',
+                            'p.wb-break-word::text',
+                            'p.color-fg-muted::text',
+                            'p.color-text-secondary::text'
+                        ]
+                        
+                        for selector in about_selectors:
+                            about = repo.css(selector).get()
+                            if about:
+                                about = about.strip()
+                                break
+                        
+                        if not about:
+                            about = "No description"
                         
                         self.logger.info(f"Found repository: {name}")
                         
@@ -97,12 +130,12 @@ class GithubSpider(scrapy.Spider):
         
         #handle no repo
         if not repos_found:
-            self.logger.warning("No repositories found with any selector")
+            self.logger.warning("no repositories found with any selector")
             page_sample = response.css('body').extract_first()
             if page_sample and "doesn't have any public repositories yet" in page_sample:
-                self.logger.info("Page indicates this user has no public repositories yet")
+                self.logger.info("no public repo")
                 yield {
-                    'message': "This GitHub account doesn't have any public repositories"
+                    'message': "github acc no repo"
                 }
         
         next_page = response.css('a.next_page::attr(href)').get()
@@ -122,6 +155,7 @@ class GithubSpider(scrapy.Spider):
             self.logger.info(f"Empty repository: {repo_data['name']}")
             
             standardized_output = {
+                'name': repo_data['name'],
                 'url': repo_data['url'],
                 'about': repo_data['about'],
                 'last_updated': repo_data['last_updated'],
@@ -163,6 +197,7 @@ class GithubSpider(scrapy.Spider):
         
         #output
         standardized_output = {
+            'name': repo_data['name'],
             'url': repo_data['url'],
             'about': repo_data['about'],
             'last_updated': repo_data['last_updated'],
